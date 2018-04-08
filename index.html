@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>Control de Dosificacion de Cafe
+</head>
+<body>
+  v1.002
+  <h1>Iniciar sesión</h1>
+  <button id="login">Inicia con Google</button><br>
+  Tipo de Cafe
+  <select name="tipoCafe">
+    <option value="normal" selected>Normal</option>
+    <option value="descafeinado" >Descafeinado</option>
+    <option value="expresso">Expresso</option>
+  </select>
+  Tamaño
+  <select name="tamano">
+    <option value="mediano" selected>Mediano</option>
+    <option value="grande" >Grande</option>
+    <option value="chico">Chico</option>
+  </select>
+  <button id="leerDatos">leer datos</button><br>
+  <p id='parrafo'>Esperando por leer dato</p>
+  <div id="root"></div>
+  <button id="guardar">Guardar algunos Datos</button>
+  <div id="cafe">
+      <img src="cafe.jpeg">
+      <button id="dosisCafeina">Tasa de Cafe</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC3lMBOSHJkNalX1ixqOJMuVDX-gRWUdps",
+    authDomain: "controlcafe-79995.firebaseapp.com",
+    databaseURL: "https://controlcafe-79995.firebaseio.com",
+    projectId: "controlcafe-79995",
+    storageBucket: "controlcafe-79995.appspot.com",
+    messagingSenderId: "225668872917"
+  };
+  firebase.initializeApp(config);
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
